@@ -1,5 +1,9 @@
 <template>
-  <input type='text' v-model='todo' @keyup.enter='addTodo()' />
+  <div class="form-group row">
+    <div class="form-group has-feedback text-right">
+        <input type="text" class="form-control" v-model='todo' @keyup.enter='addTodo()' id="inputValidation" placeholder="New to do"/>
+    </div>
+  </div>
 </template>
 
 <script>

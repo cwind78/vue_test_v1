@@ -1,9 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-link :to="{name : 'HelloWorld'}">Home</router-link>
-    <router-link :to="{name : 'Introduce'}">Introduce</router-link>
-    <router-view/>
+    <div class="left_menu">
+      <img src="./assets/logo.png">
+      <div>
+        <router-link :to="{name : 'HelloWorld'}">Home</router-link>
+      </div>
+      <div>
+        <router-link :to="{name : 'Introduce'}">Introduce</router-link>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-search">Search</span>
+      </div>
+    </div>
+    <div class="right_menu">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -21,5 +32,26 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+router-link {
+  margin-bottom:50px;
+}
+
+router-view {
+  text-align : left;
+}
+
+.left_menu {
+  height:100%;
+  width:20%;
+  max-width:200px;
+  float:left;
+  border-right:1px dotted grey;
+}
+
+.right_menu {
+  height:100%;
+  width:80%;
 }
 </style>

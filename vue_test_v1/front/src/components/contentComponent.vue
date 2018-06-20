@@ -28,4 +28,10 @@ export default {
 </script>
 
 <style>
+li {
+  list-style : none;
+  margin : 0px;
+  padding : 0px;
+  text-align : center;
+}
 </style>
